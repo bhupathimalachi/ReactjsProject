@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import Customers from "./Customers";
 ReactDOM.render(
   <React.StrictMode>
+    {/* <App/> */}
     <Customers/>
   </React.StrictMode>,
   document.getElementById('root')

@@ -5,7 +5,7 @@ function First(){
 
     const[num,setNum]=useState(0);
 
-    useEffect(()=>{
+    useEffect(()=>{     
         setInterval(() => {
             setNum(num+1);
             
