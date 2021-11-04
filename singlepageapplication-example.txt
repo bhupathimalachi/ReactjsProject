@@ -1,0 +1,84 @@
+project name: singlepageapplication-example
+
+yarn add react-router-dom
+
+
+import React from "react";
+
+function Pageone() {
+    return (
+        <React.Fragment>
+            <h1 style={{ color: "red" }}>Page One !!!</h1>
+        </React.Fragment>
+    )
+}
+export default Pageone;
+
+
+
+import React from "react";
+
+function Pagetwo(){
+    return(
+        <React.Fragment>
+            <h1 style={{color:"red"}}>Page Two !!!</h1>
+        </React.Fragment>
+    )
+}
+export default Pagetwo;
+
+
+
+import React from "react";
+
+function Pagethree() {
+    return (
+        <React.Fragment>
+            <h1 style={{ color: "red" }}>Page three !!!</h1>
+        </React.Fragment>
+    )
+}
+export default Pagethree;
+
+
+
+
+
+import React from "react";
+import Pageone from "";
+import Pagetwo from "./Pagetwo";
+import Pagethree from "./Pagethree";
+import { BrowserRouter as Router, NavLink, Routes } from "react-router-dom";
+function Master() {
+    return (
+
+        <React.Fragment>
+            <Router>
+                <NavLink to="/page_one"
+                    activeStyle={{ color: "red" }}
+                    exact={true} strict
+                    style={{ marginRight: 100 }}>PAGE_ONE</NavLink>
+
+                <NavLink to="/page_two"
+                    activeStyle={{ color: "green" }}
+                    exact={true} strict
+                    style={{ marginRight: 100 }}>PAGE_TWO</NavLink>
+
+                <NavLink to="/page_three" 
+                    activeStyle={{ color: "blue" }}
+                    exact={true} strict
+                    style={{ marginRight: 100 }}>PAGE_THREE</NavLink>
+
+                <br></br>
+                <Routes path="/page_one" component={Pageone} exact={true} strict></Routes>
+                <Routes path="/page_two" component={Pagetwo} exact={true} strict></Routes>
+                <Routes path="/page_three" component={Pagethree} exact={true} strict></Routes>
+
+            </Router>
+
+        </React.Fragment>
+    )
+
+};
+export default Master;
+
