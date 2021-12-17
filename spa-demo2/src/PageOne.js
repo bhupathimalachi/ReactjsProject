@@ -8,7 +8,7 @@ function PageOne(){
         <React.Fragment>
             <Router>
                  <h1 style={{color:"red"}}>Welcome to Page one..............!!!!!!</h1>
-                 <NavLink to="/Child_One" style={{color:"blue"}} exact={true} strict>Child-One</NavLink>
+                 <NavLink to="/Child_One" activeStyle={{color:"blue"}} exact={true} strict>Child-One</NavLink>
                 <br></br><br></br>
                 <Route path="/Child_One" component={ChildOne} exact={true} strict></Route>
             </Router>

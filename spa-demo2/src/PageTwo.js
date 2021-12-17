@@ -6,7 +6,7 @@ function PageTwo(){
         <React.Fragment>
             <Router>
             <h1 style={{color:"blue"}}>welcome to page two ....... !!!</h1>
-            <NavLink to="/Child_Two" style={{color:"green"}} exact={true} strict>Child-two</NavLink>
+            <NavLink to="/Child_Two" activeStyle={{color:"green"}} exact={true} strict>Child-two</NavLink>
             <br></br><br></br>
             <Route path="/Child_Two" component={ChildTwo} exact={true} strict></Route>
             </Router>
